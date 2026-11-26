@@ -27,7 +27,6 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               nodejs_22
-              nodePackages.npm
             ];
 
             shellHook = ''
@@ -41,6 +40,6 @@
         }
       );
 
-      formatter = forAllSystems (system: (pkgsFor system).nixfmt-rfc-style);
+      formatter = forAllSystems (system: (pkgsFor system).nixfmt);
     };
 }
