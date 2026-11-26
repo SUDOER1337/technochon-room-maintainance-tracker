@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,viewport-fit=cover"
+        />
+        <meta name="theme-color" content="#102c55" />
+        <title>CTC Clean Tracker</title>
+        <link rel="stylesheet" href="/styles/app.css" />
+        <script type="module" src="/main.js"></script>
+    </head>
+    <body>
+        <div class="app-shell">
+            <aside
+                class="sidebar canva-sidebar"
+                data-template-id="sidebar"
+                style="background: rgb(16, 44, 85)"
+            >
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i data-lucide="school"></i>
+                    </div>
+                    <div>
+                        <span
+                            data-template-id="brand-name"
+                            class="canva-text"
+                            style="
+                                color: rgb(255, 255, 255);
+                                font-weight: 700;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >ตรวจเวรอาคาร</span
+                        ><small
+                            data-template-id="brand-caption"
+                            class="canva-text"
+                            style="
+                                color: rgb(182, 210, 247);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >ระบบดูแลห้องเรียน</small
+                        >
+                    </div>
+                </div>
+                <nav class="nav" aria-label="เมนูหลัก">
+                    <button type="button" data-view="dashboard" class="active">
+                        <i data-lucide="layout-dashboard"></i
+                        ><span
+                            data-template-id="nav-dashboard"
+                            class="canva-text"
+                            style="
+                                color: rgb(255, 255, 255);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >ภาพรวม</span
+                        >
+                    </button>
+                    <button type="button" data-view="inspection">
+                        <i data-lucide="clipboard-check"></i
+                        ><span
+                            data-template-id="nav-inspection"
+                            class="canva-text"
+                            style="
+                                color: rgb(199, 216, 240);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >ตรวจห้องเรียน</span
+                        >
+                    </button>
+                    <button type="button" data-view="issues">
+                        <i data-lucide="triangle-alert"></i
+                        ><span
+                            data-template-id="nav-issues"
+                            class="canva-text"
+                            style="
+                                color: rgb(199, 216, 240);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >แจ้งปัญหา</span
+                        >
+                    </button>
+                    <button type="button" data-view="history">
+                        <i data-lucide="history"></i
+                        ><span
+                            data-template-id="nav-history"
+                            class="canva-text"
+                            style="
+                                color: rgb(199, 216, 240);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >ประวัติการตรวจ</span
+                        >
+                    </button>
+                    <button type="button" data-view="report">
+                        <i data-lucide="file-chart-column"></i
+                        ><span
+                            data-template-id="nav-report"
+                            class="canva-text"
+                            style="
+                                color: rgb(199, 216, 240);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >รายงานรายเดือน</span
+                        >
+                    </button>
+                    <button type="button" data-view="settings">
+                        <i data-lucide="building-2"></i
+                        ><span
+                            data-template-id="nav-settings"
+                            class="canva-text"
+                            style="
+                                color: rgb(199, 216, 240);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                            >จัดการอาคารและห้อง</span
+                        >
+                    </button>
+                </nav>
+                <div
+                    class="side-note"
+                    data-template-id="privacy-note"
+                    style="
+                        background: rgb(29, 66, 111);
+                        color: rgb(196, 217, 244);
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 14px;
+                    "
+                >
+                    ข้อมูลที่บันทึกจะแสดงแก่ผู้ที่เข้าถึงแอปนี้ได้
+                    กรุณาใช้ในพื้นที่ที่เหมาะสมกับข้อมูลโรงเรียน
+                </div>
+            </aside>
+            <div class="content">
+                <header class="topbar canva-header">
+                    <div>
+                        <h1 id="page-title" aria-live="polite">
+                            ภาพรวมการตรวจเวร
+                        </h1>
+                        <p id="page-subtitle">
+                            ติดตามความเรียบร้อยของห้องเรียนในที่เดียว
+                        </p>
+                    </div>
+                    <div class="top-actions">
+                        <span class="today" id="today-text"></span
+                        ><button
+                            type="button"
+                            class="btn"
+                            data-view="inspection"
+                        >
+                            <i data-lucide="plus"></i
+                            ><span
+                                data-template-id="start-label"
+                                class="canva-text"
+                                style="
+                                    color: rgb(255, 255, 255);
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-size: 14px;
+                                "
+                                >เริ่มตรวจ</span
+                            >
+                        </button>
+                    </div>
+                </header>
+                <main class="main">
+                    <div id="view-container"></div>
+                    <div
+                        id="global-message"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+                    <div id="load-state" class="loading" role="status">
+                        กำลังโหลดข้อมูลจาก device storage…
+                    </div>
+                    <button
+                        id="retry-load"
+                        type="button"
+                        class="btn secondary hidden no-print"
+                    >
+                        ลองเชื่อมต่ออีกครั้ง
+                    </button>
+                </main>
+                <footer
+                    class="footer canva-footer"
+                    data-template-id="footer-note"
+                    style="
+                        color: rgb(104, 128, 156);
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 14px;
+                    "
+                >
+                    ระบบตรวจเวรอาคารเรียน · ข้อมูลสรุปคำนวณจากรายการที่บันทึก
+                </footer>
+            </div>
+        </div>
+        <nav class="mobile-nav" aria-label="เมนูมือถือ">
+            <button type="button" data-view="dashboard" class="active">
+                <i data-lucide="layout-dashboard"></i>ภาพรวม</button
+            ><button type="button" data-view="inspection">
+                <i data-lucide="clipboard-check"></i>ตรวจห้อง</button
+            ><button type="button" data-view="issues">
+                <i data-lucide="triangle-alert"></i>ปัญหา</button
+            ><button type="button" data-view="history">
+                <i data-lucide="history"></i>ประวัติ</button
+            ><button type="button" data-view="report">
+                <i data-lucide="file-chart-column"></i>รายงาน</button
+            ><button type="button" data-view="settings">
+                <i data-lucide="building-2"></i>จัดการ
+            </button>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<section id="inspection-view" class="view">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="inspection-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    ตรวจห้องเรียน
+                                </h2>
+                                <p
+                                    data-template-id="inspection-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    เลือกห้อง ประเมินรายการ แล้วบันทึกผล
+                                </p>
+                            </div>
+                        </div>
+                        <form id="inspection-form">
+                            <div class="card">
+                                <h3
+                                    data-template-id="inspection-details-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    ข้อมูลการตรวจ
+                                </h3>
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label
+                                            for="inspect-date"
+                                            data-template-id="inspect-date-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >วันที่ตรวจสอบ</label
+                                        ><input
+                                            id="inspect-date"
+                                            type="date"
+                                            required=""
+                                        />
+                                    </div>
+                                    <div class="field">
+                                        <label
+                                            for="inspect-period"
+                                            data-template-id="inspect-period-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >ช่วงเวลาตรวจสอบ</label
+                                        ><select
+                                            id="inspect-period"
+                                            required=""
+                                        >
+                                            <option value="">
+                                                เลือกช่วงเวลา
+                                            </option>
+                                            <option>เช้า</option>
+                                            <option>กลางวัน</option>
+                                            <option>เย็น</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label
+                                            for="inspect-teacher"
+                                            data-template-id="inspect-teacher-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >ชื่อครูผู้ตรวจสอบ</label
+                                        ><input
+                                            id="inspect-teacher"
+                                            required=""
+                                            placeholder="กรอกชื่อผู้ตรวจ"
+                                        />
+                                    </div>
+                                    <div class="field">
+                                        <label
+                                            for="inspect-building"
+                                            data-template-id="inspect-building-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >อาคาร</label
+                                        ><select
+                                            id="inspect-building"
+                                            required=""
+                                        ></select>
+                                    </div>
+                                    <div class="field">
+                                        <label
+                                            for="inspect-floor"
+                                            data-template-id="inspect-floor-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >ชั้น</label
+                                        ><select
+                                            id="inspect-floor"
+                                            required=""
+                                        ></select>
+                                    </div>
+                                    <div class="field">
+                                        <label
+                                            for="inspect-room"
+                                            data-template-id="inspect-room-label"
+                                            class="canva-text"
+                                            style="
+                                                color: rgb(16, 44, 85);
+                                                font-weight: 600;
+                                                font-style: normal;
+                                                font-size: 14px;
+                                            "
+                                            >ห้องเรียน</label
+                                        ><select
+                                            id="inspect-room"
+                                            required=""
+                                        ></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="margin-top: 18px">
+                                <h3>
+                                    <span
+                                        data-template-id="checklist-heading"
+                                        class="canva-text"
+                                        style="
+                                            color: rgb(16, 44, 85);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >รายการตรวจสอบ</span
+                                    >
+                                    <span
+                                        data-template-id="scoring-key"
+                                        class="small-muted canva-text"
+                                        style="
+                                            color: rgb(104, 128, 156);
+                                            font-weight: 400;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >ดีมาก 5 · ดี 4 · ปานกลาง 3 · ควรปรับปรุง 2
+                                        · แย่ 1</span
+                                    >
+                                </h3>
+                                <div id="checklist" class="checklist"></div>
+                                <div id="live-score" class="notice">
+                                    เลือกคะแนนเพื่อดูผลประเมิน
+                                </div>
+                            </div>
+                            <div class="card" style="margin-top: 18px">
+                                <h3
+                                    data-template-id="inspection-photo-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    ภาพประกอบก่อนบันทึก
+                                </h3>
+                                <div class="field">
+                                    <label
+                                        for="inspect-photos"
+                                        data-template-id="inspection-photo-label"
+                                        class="canva-text"
+                                        style="
+                                            color: rgb(16, 44, 85);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >เลือกภาพหรือถ่ายภาพ</label
+                                    ><input
+                                        id="inspect-photos"
+                                        type="file"
+                                        accept="image/*"
+                                        multiple=""
+                                    />
+                                </div>
+                                <div
+                                    id="inspect-preview"
+                                    class="preview"
+                                    style="margin-top: 12px"
+                                ></div>
+                                <p
+                                    data-template-id="inspection-photo-note"
+                                    class="small-muted canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    ภาพแสดงตัวอย่างบนอุปกรณ์นี้เท่านั้น
+                                    ยังไม่สามารถจัดเก็บหรือเปิดย้อนหลังได้
+                                </p>
+                            </div>
+                            <div class="form-actions">
+                                <button
+                                    id="save-inspection"
+                                    type="submit"
+                                    class="btn"
+                                >
+                                    <i data-lucide="save"></i
+                                    ><span
+                                        data-template-id="save-inspection-label"
+                                        class="canva-text"
+                                        style="
+                                            color: rgb(255, 255, 255);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >บันทึกผลตรวจ</span
+                                    >
+                                </button>
+                            </div>
+                        </form>
+                    </section>

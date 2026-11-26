@@ -1,0 +1,189 @@
+<section id="dashboard-view" class="view active">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="dashboard-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    ภาพรวมวันนี้
+                                </h2>
+                                <p
+                                    data-template-id="dashboard-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    สรุปข้อมูลจากผลตรวจที่บันทึกไว้
+                                </p>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="icon">
+                                    <i data-lucide="building-2"></i>
+                                </div>
+                                <span
+                                    data-template-id="stat-buildings-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >อาคารทั้งหมด</span
+                                ><strong id="stat-buildings">0</strong
+                                ><small
+                                    data-template-id="stat-buildings-caption"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >อาคารที่เพิ่มไว้</small
+                                >
+                            </div>
+                            <div class="stat">
+                                <div class="icon">
+                                    <i data-lucide="door-open"></i>
+                                </div>
+                                <span
+                                    data-template-id="stat-rooms-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >ห้องเรียนทั้งหมด</span
+                                ><strong id="stat-rooms">0</strong
+                                ><small
+                                    data-template-id="stat-rooms-caption"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >ห้องที่เพิ่มไว้</small
+                                >
+                            </div>
+                            <div class="stat">
+                                <div class="icon">
+                                    <i data-lucide="clipboard-check"></i>
+                                </div>
+                                <span
+                                    data-template-id="stat-checked-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >ตรวจแล้ววันนี้</span
+                                ><strong id="stat-checked">0</strong
+                                ><small id="unchecked-text"
+                                    >ยังไม่ตรวจ 0 ห้อง</small
+                                >
+                            </div>
+                            <div class="stat">
+                                <div class="icon">
+                                    <i data-lucide="chart-no-axes-combined"></i>
+                                </div>
+                                <span
+                                    data-template-id="stat-average-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >คะแนนเฉลี่ย</span
+                                ><strong id="stat-average">—</strong
+                                ><small
+                                    data-template-id="stat-average-caption"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >ผลตรวจทั้งหมด</small
+                                >
+                            </div>
+                        </div>
+                        <div class="grid-two">
+                            <div class="card">
+                                <h3
+                                    data-template-id="chart-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    คะแนนเฉลี่ยแต่ละอาคาร
+                                </h3>
+                                <div class="chartbox">
+                                    <canvas
+                                        id="building-chart"
+                                        role="img"
+                                        aria-label="กราฟคะแนนเฉลี่ยแต่ละอาคาร"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3>
+                                    <span
+                                        data-template-id="pending-heading"
+                                        class="canva-text"
+                                        style="
+                                            color: rgb(16, 44, 85);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >ปัญหาที่ต้องติดตาม</span
+                                    >
+                                    <span id="issue-counter" class="badge warn"
+                                        >0 รายการ</span
+                                    >
+                                </h3>
+                                <div id="recent-issues"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3
+                                data-template-id="recent-heading"
+                                class="canva-text"
+                                style="
+                                    color: rgb(16, 44, 85);
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-size: 16px;
+                                "
+                            >
+                                ผลตรวจล่าสุด
+                            </h3>
+                            <div id="recent-inspections"></div>
+                        </div>
+                    </section>

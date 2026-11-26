@@ -1,0 +1,30 @@
+[
+  {
+    "label": "Vite: dev",
+    "command": "npm run dev",
+    "args": [],
+    "allow_concurrent_runs": true,
+    "use_new_terminal": false,
+  },
+  {
+    "label": "Vite: dev (npm.cmd)",
+    "command": "npm.cmd run dev",
+    "args": [],
+    "allow_concurrent_runs": true,
+    "use_new_terminal": false,
+  },
+  {
+    "label": "Vite: build",
+    "command": "npm run build",
+    "args": [],
+    "allow_concurrent_runs": true,
+    "use_new_terminal": false,
+  },
+  {
+    "label": "Vite: preview",
+    "command": "npm run preview",
+    "args": [],
+    "allow_concurrent_runs": true,
+    "use_new_terminal": false,
+  },
+]

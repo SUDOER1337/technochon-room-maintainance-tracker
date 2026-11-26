@@ -1,0 +1,17 @@
+{
+  "name": "ctc-clean-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CTC Clean Tracker - classroom inspection app",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

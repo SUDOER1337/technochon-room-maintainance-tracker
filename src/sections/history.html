@@ -1,0 +1,67 @@
+<section id="history-view" class="view">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="history-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    ประวัติการตรวจ
+                                </h2>
+                                <p
+                                    data-template-id="history-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    ค้นหาผลตรวจย้อนหลังได้ทุกช่วงเวลา
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="toolbar">
+                                <label class="sr-only" for="history-search"
+                                    >ค้นหาอาคาร ห้อง หรือชื่อครู</label
+                                ><input
+                                    id="history-search"
+                                    class="search"
+                                    placeholder="ค้นหาอาคาร ห้อง หรือชื่อครู"
+                                /><label class="sr-only" for="history-date"
+                                    >กรองวันที่ตรวจ</label
+                                ><input
+                                    id="history-date"
+                                    type="date"
+                                    class="search"
+                                />
+                            </div>
+                            <div
+                                id="history-detail"
+                                class="detail-panel hidden"
+                                role="status"
+                            ></div>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>วันและเวลาบันทึก</th>
+                                            <th>ห้อง</th>
+                                            <th>ผู้ตรวจ</th>
+                                            <th>ช่วงเวลา</th>
+                                            <th>คะแนน</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="history-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>

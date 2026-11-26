@@ -1,0 +1,163 @@
+<section id="issues-view" class="view">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="issues-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    แจ้งและติดตามปัญหา
+                                </h2>
+                                <p
+                                    data-template-id="issues-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    บันทึกปัญหาที่พบระหว่างตรวจอาคาร
+                                </p>
+                            </div>
+                        </div>
+                        <form id="issue-form" class="card">
+                            <h3
+                                data-template-id="new-issue-heading"
+                                class="canva-text"
+                                style="
+                                    color: rgb(16, 44, 85);
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-size: 16px;
+                                "
+                            >
+                                แจ้งปัญหาใหม่
+                            </h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="issue-building">อาคาร</label
+                                    ><select
+                                        id="issue-building"
+                                        required=""
+                                    ></select>
+                                </div>
+                                <div class="field">
+                                    <label for="issue-floor">ชั้น</label
+                                    ><select
+                                        id="issue-floor"
+                                        required=""
+                                    ></select>
+                                </div>
+                                <div class="field">
+                                    <label for="issue-room">ห้อง</label
+                                    ><select
+                                        id="issue-room"
+                                        required=""
+                                    ></select>
+                                </div>
+                                <div class="field">
+                                    <label for="issue-type">ประเภทปัญหา</label
+                                    ><select id="issue-type" required="">
+                                        <option value="">เลือกประเภท</option>
+                                        <option>ห้องเรียนสกปรก</option>
+                                        <option>อุปกรณ์ชำรุด</option>
+                                        <option>ระบบไฟฟ้ามีปัญหา</option>
+                                        <option>พัดลมหรือเครื่องปรับอากาศเสีย</option>
+                                        <option>ประตูหรือหน้าต่างชำรุด</option>
+                                        <option>น้ำรั่วหรือหลังคารั่ว</option>
+                                        <option>ปัญหาด้านความปลอดภัย</option>
+                                        <option>อื่น ๆ</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="issue-urgency">ความเร่งด่วน</label
+                                    ><select id="issue-urgency">
+                                        <option>ปกติ</option>
+                                        <option>เร่งด่วน</option>
+                                        <option>เร่งด่วนมาก</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="issue-teacher">ชื่อผู้แจ้ง</label
+                                    ><input id="issue-teacher" required="" />
+                                </div>
+                                <div class="field full">
+                                    <label for="issue-detail"
+                                        >รายละเอียดปัญหา</label
+                                    ><textarea
+                                        id="issue-detail"
+                                        required=""
+                                        placeholder="อธิบายสิ่งที่พบ"
+                                    ></textarea>
+                                </div>
+                                <div class="field full">
+                                    <label for="issue-photos"
+                                        >ภาพประกอบ (ตัวอย่างชั่วคราว)</label
+                                    ><input
+                                        id="issue-photos"
+                                        type="file"
+                                        accept="image/*"
+                                        multiple=""
+                                    />
+                                    <div
+                                        id="issue-preview"
+                                        class="preview"
+                                    ></div>
+                                </div>
+                            </div>
+                            <p
+                                data-template-id="issue-photo-note"
+                                class="small-muted canva-text"
+                                style="
+                                    color: rgb(104, 128, 156);
+                                    font-weight: 400;
+                                    font-style: normal;
+                                    font-size: 14px;
+                                "
+                            >
+                                รูปที่เลือกจะไม่ถูกจัดเก็บพร้อมรายงานปัญหา
+                            </p>
+                            <div class="form-actions">
+                                <button
+                                    id="save-issue"
+                                    type="submit"
+                                    class="btn"
+                                >
+                                    <i data-lucide="triangle-alert"></i
+                                    ><span
+                                        data-template-id="save-issue-label"
+                                        class="canva-text"
+                                        style="
+                                            color: rgb(255, 255, 255);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                        >แจ้งปัญหา</span
+                                    >
+                                </button>
+                            </div>
+                        </form>
+                        <div class="card" style="margin-top: 18px">
+                            <h3
+                                data-template-id="issue-list-heading"
+                                class="canva-text"
+                                style="
+                                    color: rgb(16, 44, 85);
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-size: 16px;
+                                "
+                            >
+                                รายการปัญหา
+                            </h3>
+                            <div id="issue-list"></div>
+                        </div>
+                    </section>

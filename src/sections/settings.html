@@ -1,0 +1,159 @@
+<section id="settings-view" class="view">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="settings-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    จัดการอาคารและห้อง
+                                </h2>
+                                <p
+                                    data-template-id="settings-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    เพิ่มสถานที่สำหรับเลือกในแบบฟอร์มตรวจ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-two">
+                            <form id="building-form" class="card">
+                                <h3
+                                    data-template-id="add-building-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    เพิ่มอาคาร
+                                </h3>
+                                <div class="field">
+                                    <label for="new-building">ชื่ออาคาร</label
+                                    ><input
+                                        id="new-building"
+                                        required=""
+                                        placeholder="เช่น อาคารเรียน 1"
+                                    />
+                                </div>
+                                <div class="form-actions">
+                                    <button
+                                        id="save-building"
+                                        type="submit"
+                                        class="btn"
+                                        data-template-id="save-building-label"
+                                        style="
+                                            background: rgb(23, 104, 210);
+                                            color: rgb(255, 255, 255);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        เพิ่มอาคาร
+                                    </button>
+                                </div>
+                            </form>
+                            <form id="room-form" class="card">
+                                <h3
+                                    data-template-id="add-room-heading"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 16px;
+                                    "
+                                >
+                                    เพิ่มห้องเรียน
+                                </h3>
+                                <div
+                                    class="form-grid"
+                                    style="grid-template-columns: 1fr 1fr"
+                                >
+                                    <div class="field">
+                                        <label for="room-building">อาคาร</label
+                                        ><select
+                                            id="room-building"
+                                            required=""
+                                        ></select>
+                                    </div>
+                                    <div class="field">
+                                        <label for="new-floor">ชั้น</label
+                                        ><input
+                                            id="new-floor"
+                                            required=""
+                                            placeholder="เช่น 2"
+                                        />
+                                    </div>
+                                    <div class="field full">
+                                        <label for="new-room">หมายเลขห้อง</label
+                                        ><input
+                                            id="new-room"
+                                            required=""
+                                            placeholder="เช่น 204"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button
+                                        id="save-room"
+                                        type="submit"
+                                        class="btn"
+                                        data-template-id="save-room-label"
+                                        style="
+                                            background: rgb(23, 104, 210);
+                                            color: rgb(255, 255, 255);
+                                            font-weight: 600;
+                                            font-style: normal;
+                                            font-size: 14px;
+                                        "
+                                    >
+                                        เพิ่มห้อง
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card">
+                            <h3
+                                data-template-id="locations-heading"
+                                class="canva-text"
+                                style="
+                                    color: rgb(16, 44, 85);
+                                    font-weight: 600;
+                                    font-style: normal;
+                                    font-size: 16px;
+                                "
+                            >
+                                อาคารและห้องที่มีอยู่
+                            </h3>
+                            <div id="location-list"></div>
+                        </div>
+                        <div
+                            class="notice"
+                            data-template-id="access-note"
+                            style="
+                                background: rgb(234, 244, 255);
+                                color: rgb(36, 84, 130);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 14px;
+                            "
+                        >
+                            ระบบนี้ไม่มีการเข้าสู่ระบบหรือแบ่งสิทธิ์ผู้ใช้งาน
+                            โปรดอย่าใช้เป็นพื้นที่เก็บข้อมูลที่ต้องจำกัดการเข้าถึง
+                        </div>
+                    </section>

@@ -1,0 +1,85 @@
+<section id="report-view" class="view">
+                        <div class="section-head">
+                            <div>
+                                <h2
+                                    data-template-id="report-heading-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 700;
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    "
+                                >
+                                    รายงานประจำเดือน
+                                </h2>
+                                <p
+                                    data-template-id="report-description"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(104, 128, 156);
+                                        font-weight: 400;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    สรุปจากผลตรวจและปัญหาที่บันทึกจริง
+                                </p>
+                            </div>
+                            <button
+                                type="button"
+                                id="print-report"
+                                class="btn secondary no-print"
+                            >
+                                <i data-lucide="printer"></i
+                                ><span
+                                    data-template-id="print-label"
+                                    class="canva-text"
+                                    style="
+                                        color: rgb(16, 44, 85);
+                                        font-weight: 600;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                    "
+                                    >พิมพ์ / PDF</span
+                                >
+                            </button>
+                        </div>
+                        <div class="report-top no-print">
+                            <div class="field">
+                                <label for="school-name">ชื่อโรงเรียน</label
+                                ><input
+                                    id="school-name"
+                                    placeholder="ชื่อโรงเรียน"
+                                />
+                            </div>
+                            <div class="field">
+                                <label for="report-month">เดือนที่รายงาน</label
+                                ><input id="report-month" type="month" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 id="report-title">รายงานประจำเดือน</h3>
+                            <p id="report-meta" class="small-muted"></p>
+                            <div id="report-summary"></div>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>อันดับ</th>
+                                            <th>ห้องเรียน</th>
+                                            <th>จำนวนครั้ง</th>
+                                            <th>เฉลี่ย</th>
+                                            <th>คุณภาพ</th>
+                                            <th>เทียบเดือนก่อน</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="report-body"></tbody>
+                                </table>
+                            </div>
+                            <div
+                                id="report-issues"
+                                style="margin-top: 20px"
+                            ></div>
+                        </div>
+                    </section>
