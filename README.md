@@ -10,3 +10,4 @@ The app uses local browser storage and does not require a network connection for
 
 View markup lives in `src/sections/`, shared structure in `src/index.html`, styles in `src/styles/`, and application startup/data integration in `src/main.js` and `src/app.js`.
 # technochon-room-maintainance-tracker
+# technochon-room-maintainance-tracker
